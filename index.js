@@ -1,63 +1,49 @@
+'use strict';
+
 const Hapi = require('hapi');
 const server = new Hapi.Server();
-const inert = require('inert');
-
-const blipp = require('blipp');
-// const joi = require('joi');
 
 const path = require('path');
 
 const PORT = process.env.PORT || 3000;
 
+// Create a connection
 server.connection({port: PORT});
 
-
-server.register(blipp, (err) => {
-  if (err) {
-    throw err;
-  }
-});
-
-server.register(inert, (err) => {
-  if (err) {
-    throw err;
-  }
-});
-
-server.route({
-  method: 'GET',
-  path: '/',
-  handler: {
-    file: 'public/index.html'
-  }
-  //handler: function (request, reply) {
-  //  return reply('Tadaaa!!!\n');
-  //}
-});
-
-// server.route({
-//   method: 'GET',
-//   path: '/{param*}',
-//   handler: {
-//     file: 'public/' + param
-//   }
-// });
-
-server.route({
-  method: 'GET',
-  path: '/{param*}',
-  handler: {
-    directory: {
-      path: path.join(__dirname, 'public/'),
-      listing: false
-    }
-  }
-});
-
-server.start((err) => {
+// Register plugins
+server.register([
+  require('blipp'),
+  require('inert'),
+  require('vision')
+], (err) => {
   if (err) {
     throw err;
   }
 
-  console.log('Listening at', server.info.uri);
+  // Configure Vision
+  // ----------------
+  // - use handlebars as templating engine.
+  // - views under /views
+  // - use layouts, find them in views/layout
+  // - use partials, find them in  views/partials
+  server.views({
+    engines: {
+      hbs: require('handlebars')
+    },
+    relativeTo: __dirname,
+    path: './views',
+    layoutPath: './views/layout',
+    layout: true,
+    partialsPath: './views/partials',
+    helpersPath: './views/helpers',
+    isCached: false // TODO: develpment only, change for production.
+  });
+
+  server.route(require('./routes'));
+
+  // Start server
+  server.start(() => {
+    console.log('Started server at', server.info.uri);
+  });
+
 });
