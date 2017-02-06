@@ -369,64 +369,107 @@
     <div class="col-md-6 col-md-push-6 col-sm-8 col-sm-push-4">
       <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
         <div class="feature feature-1 service-1 text-center">
-          <img class="logo" alt="Bokskar" src="img/logo-large-dark.png" />
+          <img class="logo" alt="One Car Payment" src="img/logo-light-ocp.png" />
           <p class="lead">
             Calculate Car Loan Payment
           </p>
           <div class="text-left">
-            <form method="post">
-
               <div class="row">
-                <div class="col-sm-12">
-                  <div class="input-with-icon">
-                    <label>Username:</label>
-                    <i class="icon icon-Male-2"></i>
-                    <input type="text" name="name" placeholder="Username" />
+                  <div class="col-sm-12">
+                      <div class="input-with-icon">
+                          <label>Current Mileage:</label>
+                          <i class="icon icon-Car-3"></i>
+                          <input type="text" name="name" placeholder="miles" v-model="mileage"/>
+                      </div>
                   </div>
-                </div>
               </div>
-
               <div class="row">
-                <div class="col-sm-12">
-                  <div class="input-with-icon">
-                    <label>Email Address:</label>
-                    <i class="icon icon-Mail-2"></i>
-                    <input type="email" name="email" placeholder="you@yourwebsite.com" />
+                  <div class="col-sm-12">
+                      <div class="input-with-icon">
+                          <label>Car Payment Amount:</label>
+                          <i class="icon icon-Money"></i>
+                          <input type="currency" name="car_payment" placeholder="$0.00" v-model="car_payment"/>
+                      </div>
                   </div>
-                </div>
               </div>
-
               <div class="row">
-                <div class="col-sm-12">
-                  <div class="input-with-icon">
-                    <label>Create Password:</label>
-                    <i class="icon icon-Security-Check"></i>
-                    <input type="password" name="password" placeholder="&bullet;&bullet;&bullet;&bullet;&bullet;&bullet;" />
+                  <div class="col-sm-12">
+                      <div class="input-with-icon">
+                          <label>Loan Terms:</label>
+                          <select  v-model="loan_term">
+                              <option value="12">12 Months</option>
+                              <option value="24">24 Months</option>
+                              <option value="36">36 Months</option>
+                              <option value="48">48 Months</option>
+                          </select>
+                      </div>
                   </div>
-                </div>
               </div>
-
               <div class="row">
-                <div class="col-sm-12 text-center">
-                  <div class="input-checkbox">
-                    <div class="inner">
-                    </div>
-                    <input type="checkbox" />
+                  <div class="col-sm-12">
+                      <div class="input-with-icon">
+                          <label>Car Insurance Payment:</label>
+                          <i class="icon icon-Money"></i>
+                          <input type="currency" name="insurance_payment" placeholder="$0.00" v-model="insurance_payment" />
+                      </div>
                   </div>
-                  <span class="type--fine-print">I agree to the
-                    <a href="#">terms and conditions</a>
-                  </span>
-                </div>
               </div>
-
               <div class="row">
-                <div class="col-sm-12">
-                  <button type="submit" class="btn btn--primary">Get Started</button>
-                </div>
+                  <div class="col-sm-12">
+                      <div class="input-with-icon">
+                          <label>Car Insurance Terms:</label>
+                          <label class="radio-inline"><input type="radio" name="insurance_terms" value="6" v-model="insurance_terms">6 Months</label>
+                          <label class="radio-inline"><input type="radio" name="insurance_terms" value="12" v-model="insurance_terms">12 Months</label>
+                      </div>
+                  </div>
               </div>
-
-            </form>
-
+              <div class="row">
+                  <div class="col-sm-12">
+                      <div class="input-with-icon">
+                          <label>Have A Warranty:</label>
+                          <label class="radio-inline"><input type="radio" name="warranty" value="1" v-model="warranty">Yes</label>
+                          <label class="radio-inline"><input type="radio" name="warranty" value="0" v-model="warranty">No</label>
+                      </div>
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col-sm-12">
+                      <div class="input-with-icon">
+                          <label>Warranty Payment:</label>
+                          <i class="icon icon-Money"></i>
+                          <input type="currency" name="warranty_payment" placeholder="$0.00" v-model="warranty_payment" />
+                      </div>
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col-sm-12">
+                      <div class="input-with-icon">
+                          <label>Add Estimated Maintenance Cost:</label>
+                          <label class="radio-inline"><input type="radio" name="maintenance" value="1" v-model="maintenance">Yes</label>
+                          <label class="radio-inline"><input type="radio" name="maintenance" value="0" v-model="maintenance">No</label>
+                      </div>
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col-sm-12">
+                      <div class="input-with-icon">
+                          <label>Yearly Maintenance Cost:</label>
+                          <i class="icon icon-Money"></i>
+                          <input type="currency" name="maintenance_costs" placeholder="$0.00" v-model="maintenance_costs"/>
+                      </div>
+                  </div>
+              </div>
+              <br>
+              <div class="row">
+                  <div class="col-sm-12">
+                      <button class="btn btn--primary" v-on:click="calculate_payment();">Calculate</button>
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col-sm-12">
+                      <p>{{ maintenance_costs }}</p>
+                  </div>
+              </div>
           </div><!-- .text-left -->
 
         </div>

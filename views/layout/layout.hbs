@@ -2,17 +2,21 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>BOKSKar - All-In-One Car Payment</title>
+    <title>One Car Payment</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <link rel="icon" type="image/x-icon" href="/img/logo-light-no-bg.png">
+    <meta name="description" content="All-in-One Car Payment">
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
     <link href="css/socicon.css" rel="stylesheet" type="text/css" media="all" />
     <link href="css/iconsmind.css" rel="stylesheet" type="text/css" media="all" />
     <link href="css/interface-icons.css" rel="stylesheet" type="text/css" media="all" />
     <link href="css/owl.carousel.css" rel="stylesheet" type="text/css" media="all" />
     <link href="css/lightbox.min.css" rel="stylesheet" type="text/css" media="all" />
-    <link href="css/theme.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/theme-purple.css" rel="stylesheet" type="text/css" media="all" />
     <link href='https://fonts.googleapis.com/css?family=Lora:400,400italic,700%7CMontserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='css/custom.css' rel='stylesheet' type='text/css'>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
 
   </head>
 
@@ -40,6 +44,49 @@
     <script src="js/scrollreveal.min.js"></script>
     <script src="js/parallax.js"></script>
     <script src="js/scripts.js"></script>
+    <script language="javascript">
+        new Vue({
+          el:'#calculator',
+          data: {
+            mileage: '',
+            loan_term: 0,
+            car_payment: '',
+            insurance_terms: '12',
+            insurance_payment: '0',
+            insurance_increase: '0',
+            insurance_balance: '0',
+            increase_percentage: '0.08',
+            warranty: '0',
+            warranty_payment: '',
+            maintenance: '0',
+            maintenance_costs: '',
+            oil_change_miles: '4000',
+            oil_changes: '0',
+            oil_change_cost: '60',
+            tire_mileage: '40000',
+            tire_price: '130',
+            wiper_price: '22',
+            wiper_fluid_price: '2.97',
+            total: 0
+          },
+          methods: {
+            calculate_payment: function() {
+              var Y = this.mileage / this.loan_term;
+              var B = this.car_payment * this.loan_term;
+              var ins_balance = this.insurance_payment * this.insurance_terms;
+              var increase = this.insurance_balance * this.increase_percentage;
+              var Z = (increase + ins_balance) * this.loan_term;
+              var A = (this.mileage/this.oil_change_miles)*this.oil_change_cost;
+              var B = (this.mileage/this.tire_mileage)*(this.tire_price * 4);
+              var C = (2*this.wiper_price)*this.loan_term;
+              var D = (3*this.wiper_fluid_price)*this.loan_term;
+              this.maintenance = A+B+C+D;
+
+              this.total = this.car_payment * this.loan_term;
+            }
+          }
+        });
+    </script>
 
   </body>
 

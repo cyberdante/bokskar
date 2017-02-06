@@ -1,0 +1,23 @@
+.input-with-icon label + i + input[type="currency"] {
+    margin-top: 0.8125em;
+
+    background: #FFFFFF;
+    width: 100%;
+    transition: 0.2s linear;
+    -webkit-transition: 0.2s linear;
+    -moz-transition: 0.2s linear;
+    color: #767676;
+    padding-left: 4.0625em;
+    padding-right: 1.625em;
+    height: 52px;
+    border-radius: 50px;
+    border: none;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+.input-with-icon select,
+.row .col-sm-12 button {
+  width: 100%;
+}
