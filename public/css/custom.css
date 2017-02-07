@@ -18,6 +18,15 @@
 }
 
 .input-with-icon select,
-.row .col-sm-12 button {
+.row .col-sm-12 .full-width-button {
   width: 100%;
+}
+
+.left-aligned-label {
+  margin-left: 0;
+  margin-top: 25px;
+}
+
+.subscribe-button {
+  padding: 0 5px;
 }

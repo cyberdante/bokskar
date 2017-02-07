@@ -1,5 +1,5 @@
 <nav class="transition--fade">
-  <div class="nav-bar nav--absolute nav--transparent" data-fixed-at="200">
+  <div class="nav-bar nav--absolute" data-fixed-at="200">
     <!-- logo module -->
     <div class="nav-module logo-module left">
       <a href="/index">
@@ -12,15 +12,29 @@
       <ul class="menu">
         <li><a href="#home">Home</a></li>
         <li><a href="/login">Login</a></li>
-        <li><a href="#what">What We Do</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#how">How It Works</a></li>
+        {{#if what}}
+          <li><a href="#what">What We Do</a></li>
+        {{/if}}
+        {{#if about}}
+          <li><a href="#about">About</a></li>
+        {{/if}}
+        {{#if how}}
+          <li><a href="#how">How It Works</a></li>
+        {{/if}}
         <li><a href="/signup">Sign Up</a></li>
-        <li><a href="#team">Team</a></li>
-        <li><a href="#calc">Calculator</a></li>
-        <li><a href="#invest">Investors</a></li>
+        {{#if team}}
+          <li><a href="#team">Team</a></li>
+        {{/if}}
+        {{#if calculator}}
+          <li><a href="#calc">Calculator</a></li>
+        {{/if}}
+        {{#if invest}}
+          <li><a href="#invest">Investors</a></li>
+        {{/if}}
         <li><a href="/blog">Blog</a></li>
-        <li><a href="#contact">Contact</a></li>
+        {{#if contact}}
+          <li><a href="#contact">Contact</a></li>
+        {{/if}}
       </ul>
     </div><!-- end menu-module -->
   </div><!-- end nav-bar -->

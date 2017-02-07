@@ -22,7 +22,7 @@ const team_members = [
     picture_url: 'img/team/Frances.png',
     social_links: {
       twitter: '#',
-      dribble: '#',
+      linkedin: 'https://www.linkedin.com/in/frances-ferraz-197a1a17/',
       vimeo: '#',
       instagram: '#'
     }
@@ -129,7 +129,14 @@ const team_members = [
 exports.home = function (request, reply) {
 
   reply.view('home', {
-    team_members: team_members
+    team_members: team_members,
+    what: true,
+    about: true,
+    how: true,
+    team: true,
+    calculator: true,
+    invest: true,
+    contact: true
   });
 
 };

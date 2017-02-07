@@ -9,18 +9,31 @@
         <h5>{{first_name}} {{last_name}}</h5>
       </div>
       <ul class="social-list pos-absolute pos-bottom">
-        <li>
-          <a href="{{social_links.twitter}}"><i class="socicon-twitter"></i></a>
-        </li>
-        <li>
-          <a href="{{social_links.dribble}}"><i class="socicon-dribbble"></i></a>
-        </li>
-        <li>
-          <a href="{{social_links.vimeo}}"><i class="socicon-vimeo"></i></a>
-        </li>
-        <li>
-          <a href="{{social_links.instagram}}"><i class="socicon-instagram"></i></a>
-        </li>
+        {{#if social_links.twitter}}
+          <li>
+            <a href="{{social_links.twitter}}"><i class="socicon-twitter"></i></a>
+          </li>
+        {{/if}}
+        {{#if social_links.dribble}}
+          <li>
+            <a href="{{social_links.dribble}}"><i class="socicon-dribbble"></i></a>
+          </li>
+        {{/if}}
+        {{#if social_links.linkedin}}
+          <li>
+            <a href="{{social_links.linkedin}}"><i class="socicon-linkedin"></i></a>
+          </li>
+        {{/if}}
+        {{#if social_links.vimeo}}
+          <li>
+            <a href="{{social_links.vimeo}}"><i class="socicon-vimeo"></i></a>
+          </li>
+        {{/if}}
+        {{#if social_links.instagram}}
+          <li>
+            <a href="{{social_links.instagram}}"><i class="socicon-instagram"></i></a>
+          </li>
+        {{/if}}
       </ul>
     </div>
   </div>
