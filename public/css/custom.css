@@ -39,6 +39,10 @@
   padding: 0;
 }
 
+.hidden-md .nav-mobile-toggle {
+  display: none;
+}
+
 .nav-mobile-toggle span:after,
 .nav-mobile-toggle span:before {
   content: "";
