@@ -158,3 +158,9 @@ exports.blog = function (request, reply) {
   reply.view('blog', {});
 
 };
+
+exports.blogDetail = function (request, reply) {
+
+  reply.view('blog_detail', {});
+  
+};

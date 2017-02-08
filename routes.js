@@ -38,6 +38,12 @@ module.exports = [
     path: '/blog',
     handler: StaticPages.blog
   },
+  // /blog/{id}
+  {
+    method: 'GET',
+    path: '/blog/{id}',
+    handler: StaticPages.blogDetail
+  },
 
   // Static Assets (images/css)
   // --------------------------
