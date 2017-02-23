@@ -38,11 +38,16 @@ module.exports = [
     path: '/blog',
     handler: StaticPages.blog
   },
-  // /blog/{id}
+  // /blog/{post_id}
   {
     method: 'GET',
-    path: '/blog/{id}',
-    handler: StaticPages.blogDetail
+    path: '/blog/{post_id}',
+    handler: StaticPages.blogDetail,
+    config: {
+        description: 'blog posts',
+        notes: 'The post_id parameter defaults to \'blog_detail\' if unspecified',
+        tags: ['api', 'blog', 'posts']
+    }
   },
 
   // Static Assets (images/css)

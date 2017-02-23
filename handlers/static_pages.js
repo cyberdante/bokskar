@@ -161,6 +161,10 @@ exports.blog = function (request, reply) {
 
 exports.blogDetail = function (request, reply) {
 
-  reply.view('blog_detail', {});
-  
+  var post_id = request.params.post_id ? encodeURIComponent(request.params.post_id) : 'blog_detail';
+
+  //search for post_name using post_id and serve reply.view('posts/' + post_name)
+
+  reply.view('posts/' + post_id, {});
+
 };
