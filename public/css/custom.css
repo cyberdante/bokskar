@@ -83,8 +83,18 @@
   visibility: visible;
 }
 
+.nav-bar .menu li:active,
+.nav-bar .menu li:hover {
+  border-bottom: 4px solid #B442BB !important;
+}
+
+.nav-bar .menu li:active a,
+.nav-bar .menu li:hover a {
+  color: #BC54C3 !important;
+}
+
 /*
-NOTE: temp fix to pancake button on large screens, bootstrap responsive 
+NOTE: temp fix to pancake button on large screens, bootstrap responsive
 utilities don't work.
  */
 @media screen and (min-width: 990px) {
