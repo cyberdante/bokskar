@@ -98,7 +98,7 @@ NOTE: temp fix to pancake button on large screens, bootstrap responsive
 utilities don't work.
  */
 @media screen and (min-width: 990px) {
-    .nav-mobile-toggle {
-        visibility: hidden;
-    }
+  .nav-mobile-toggle {
+      visibility: hidden;
+  }
 }

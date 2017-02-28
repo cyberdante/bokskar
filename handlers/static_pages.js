@@ -6,7 +6,7 @@ const team_members = [
     first_name: 'Rudy',
     last_name: 'Ferraz',
     position: 'Founder / CEO',
-    picture_url: 'img/team/Rudy.png',
+    picture_url: 'img/team/RudyFerraz.png',
     social_links: {
       twitter: '#',
       dribble: '#',
@@ -19,7 +19,7 @@ const team_members = [
     first_name: 'Frances',
     last_name: 'Ferraz',
     position: 'Founder / CFO',
-    picture_url: 'img/team/Frances.png',
+    picture_url: 'img/team/FrancesFerraz.png',
     social_links: {
       twitter: '#',
       linkedin: 'https://www.linkedin.com/in/frances-ferraz-197a1a17/',
