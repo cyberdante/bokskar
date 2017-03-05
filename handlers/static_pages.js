@@ -52,21 +52,9 @@ const team_members = [
     }
   },
   {
-    first_name: 'Todd',
-    last_name: 'Bluhm',
-    position: 'Software Developer',
-    picture_url: 'img/team/Todd.jpg',
-    social_links: {
-      twitter: 'https://twitter.com/toddbluhm',
-      linkedin: 'https://www.linkedin.com/in/toddbluhm',
-      vimeo: '#',
-      instagram: '#'
-    }
-  },
-  {
     first_name: 'Ronald',
     last_name: 'Rodriguez',
-    position: 'Junior Software Developer',
+    position: 'Software Developer',
     picture_url: 'img/team/Ronald.jpg',
     social_links: {
       twitter: 'http://www.twitter.com/ronrsuarez',
