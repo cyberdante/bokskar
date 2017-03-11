@@ -2,6 +2,7 @@
 
 const StaticPages = require('./handlers/static_pages');
 const StaticAssets = require('./handlers/static_assets');
+const Mailer = require('./handlers/mailer');
 
 module.exports = [
   // Static Pages (home, login, signup, blog)
@@ -23,6 +24,13 @@ module.exports = [
     method: 'GET',
     path: '/login',
     handler: StaticPages.login
+  },
+
+  // /login POST
+  {
+    method: 'POST',
+    path: '/login',
+    handler: Mailer.sendMail
   },
 
   // /signup

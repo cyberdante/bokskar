@@ -8,7 +8,7 @@ const team_members = [
     position: 'Founder / CEO',
     picture_url: 'img/team/RudyFerraz.png',
     social_links: {
-      twitter: '#',
+      twitter: 'https://twitter.com/onecarpayment',
       dribble: '#',
       vimeo: '#',
       instagram: '#',
@@ -21,10 +21,10 @@ const team_members = [
     position: 'Founder / CFO',
     picture_url: 'img/team/FrancesFerraz.png',
     social_links: {
-      twitter: '#',
-      linkedin: 'https://www.linkedin.com/in/frances-ferraz-197a1a17/',
-      vimeo: '#',
-      instagram: '#'
+      twitter: false,
+      linkedin: false,
+      vimeo: false,
+      instagram: false
     }
   },
   {
@@ -33,10 +33,10 @@ const team_members = [
     position: 'Founder / CTO',
     picture_url: 'img/team/Matthew.png',
     social_links: {
-      twitter: 'http://www.twitter.com/ronrsuarez',
-      dribble: '#',
-      vimeo: '#',
-      instagram: '#'
+      twitter: false,
+      linkedin: false,
+      vimeo: false,
+      instagram: false
     }
   },
   {
@@ -45,10 +45,10 @@ const team_members = [
     position: 'Senior Software Developer',
     picture_url: 'img/team/Damian.jpg',
     social_links: {
-      twitter: 'https://twitter.com/compscidamian',
-      vimeo: 'https://vimeo.com/cyberdante',
-      instagram: 'https://www.instagram.com/compscidamian/',
-      linkedin: 'https://www.linkedin.com/in/perezdamian'
+      twitter: false,
+      linkedin: false,
+      vimeo: false,
+      instagram: false
     }
   },
   {
@@ -57,22 +57,10 @@ const team_members = [
     position: 'Software Developer',
     picture_url: 'img/team/Ronald.jpg',
     social_links: {
-      twitter: 'http://www.twitter.com/ronrsuarez',
-      dribble: '#',
-      vimeo: '#',
-      instagram: '#'
-    }
-  },
-  {
-    first_name: 'Chris',
-    last_name: 'Long',
-    position: 'Junior Marketing Associate',
-    picture_url: 'img/team/ChrisLong.jpg',
-    social_links: {
-      twitter: 'https://twitter.com/TheClassicLong',
-      linkedin: 'https://www.linkedin.com/in/christopher-long-0223126a',
-      vimeo: '#',
-      instagram: '#'
+      twitter: false,
+      linkedin: false,
+      vimeo: false,
+      instagram: false
     }
   },
   {
@@ -81,10 +69,10 @@ const team_members = [
     position: 'Junior Marketing Associate',
     picture_url: 'img/team/Danni.jpg',
     social_links: {
-      twitter: '#',
-      dribble: '#',
-      vimeo: '#',
-      instagram: '#'
+      twitter: false,
+      linkedin: false,
+      vimeo: false,
+      instagram: false
     }
   },
   {
@@ -93,10 +81,10 @@ const team_members = [
     position: 'Senior Technical Writer',
     picture_url: 'img/team/Benjamin.jpg',
     social_links: {
-      twitter: 'https://twitter.com/LoneWolffe',
-      linkedin: 'https://www.linkedin.com/in/jerewindependentresearch',
-      vimeo: '#',
-      instagram: '#'
+      twitter: false,
+      linkedin: false,
+      vimeo: false,
+      instagram: false
     }
   },
   {
@@ -105,10 +93,10 @@ const team_members = [
     position: 'Senior UI/UX Designer',
     picture_url: 'img/team/Keri-Lynn.jpg',
     social_links: {
-      twitter: 'https://twitter.com/klm001',
-      dribble: 'https://dribbble.com/klm001',
-      linkedin: 'https://www.linkedin.com/in/keri-lynn-mitoff-2bb39a2',
-      instagram: 'https://www.instagram.com/klm_001'
+      twitter: false,
+      linkedin: false,
+      vimeo: false,
+      instagram: false
     }
   }
 ];
