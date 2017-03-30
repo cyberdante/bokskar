@@ -27,18 +27,18 @@ const team_members = [
       instagram: false
     }
   },
-  {
-    first_name: 'Matthew',
-    last_name: 'Stahlmann',
-    position: 'Founder / CTO',
-    picture_url: 'img/team/Matthew.png',
-    social_links: {
-      twitter: false,
-      linkedin: false,
-      vimeo: false,
-      instagram: false
-    }
-  },
+  // {
+  //   first_name: 'Matthew',
+  //   last_name: 'Stahlmann',
+  //   position: 'Founder / CTO',
+  //   picture_url: 'img/team/Matthew.png',
+  //   social_links: {
+  //     twitter: false,
+  //     linkedin: false,
+  //     vimeo: false,
+  //     instagram: false
+  //   }
+  // },
   {
     first_name: 'Damian',
     last_name: 'Perez',
@@ -86,19 +86,19 @@ const team_members = [
       vimeo: false,
       instagram: false
     }
-  },
-  {
-    first_name: 'Keri-Lynn',
-    last_name: 'Mitoff',
-    position: 'Senior UI/UX Designer',
-    picture_url: 'img/team/Keri-Lynn.jpg',
-    social_links: {
-      twitter: false,
-      linkedin: false,
-      vimeo: false,
-      instagram: false
-    }
   }
+  // ,{
+  //   first_name: 'Keri-Lynn',
+  //   last_name: 'Mitoff',
+  //   position: 'Senior UI/UX Designer',
+  //   picture_url: 'img/team/Keri-Lynn.jpg',
+  //   social_links: {
+  //     twitter: false,
+  //     linkedin: false,
+  //     vimeo: false,
+  //     instagram: false
+  //   }
+  // }
 ];
 
 // HANDLERS ===================================================================
