@@ -29,6 +29,48 @@
   padding: 0 5px;
 }
 
+.video-container {
+  height: 100vh;
+  h1 {
+    color: #FFF;
+  }
+  video {
+    width: 100%;
+  }
+
+  @media (max-width: 767px) {
+    height: calc(50vh - 65px);
+
+    h1 {
+      color: #FFF;
+    }
+    video {
+      height: 50vh;
+    }
+    .pos-vertical-center {
+      top: 50%;
+      transform: translateY(25%);
+    }
+  }
+
+  @media (max-width: 415px) {
+    height: auto;
+
+    video {
+      height: 50vh;
+    }
+    .pos-vertical-center {
+      top: 0;
+      transform: translateY(25%);
+    }
+  }
+}
+
+#what {
+  padding-bottom: 3em;
+  padding-top: 3em;
+}
+
 .nav-mobile-toggle {
   display: block;
   width: 28px;

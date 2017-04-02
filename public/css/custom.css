@@ -24,6 +24,35 @@
 .subscribe-button {
   padding: 0 5px; }
 
+.video-container {
+  height: 100vh; }
+  .video-container h1 {
+    color: #FFF; }
+  .video-container video {
+    width: 100%; }
+  @media (max-width: 767px) {
+    .video-container {
+      height: calc(50vh - 65px); }
+      .video-container h1 {
+        color: #FFF; }
+      .video-container video {
+        height: 50vh; }
+      .video-container .pos-vertical-center {
+        top: 50%;
+        transform: translateY(25%); } }
+  @media (max-width: 415px) {
+    .video-container {
+      height: auto; }
+      .video-container video {
+        height: 50vh; }
+      .video-container .pos-vertical-center {
+        top: 0;
+        transform: translateY(25%); } }
+
+#what {
+  padding-bottom: 3em;
+  padding-top: 3em; }
+
 .nav-mobile-toggle {
   display: block;
   width: 28px;

@@ -27,18 +27,6 @@ const team_members = [
       instagram: false
     }
   },
-  // {
-  //   first_name: 'Matthew',
-  //   last_name: 'Stahlmann',
-  //   position: 'Founder / CTO',
-  //   picture_url: 'img/team/Matthew.png',
-  //   social_links: {
-  //     twitter: false,
-  //     linkedin: false,
-  //     vimeo: false,
-  //     instagram: false
-  //   }
-  // },
   {
     first_name: 'Damian',
     last_name: 'Perez',
@@ -80,6 +68,18 @@ const team_members = [
     last_name: 'Jerew',
     position: 'Senior Technical Writer',
     picture_url: 'img/team/Benjamin.jpg',
+    social_links: {
+      twitter: false,
+      linkedin: false,
+      vimeo: false,
+      instagram: false
+    }
+  },
+  {
+    first_name: 'Michael',
+    last_name: 'Pistell',
+    position: 'Senior Marketing Director',
+    picture_url: 'img/team/MichaelPistell.jpg',
     social_links: {
       twitter: false,
       linkedin: false,
