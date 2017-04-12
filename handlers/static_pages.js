@@ -86,19 +86,19 @@ const team_members = [
       vimeo: false,
       instagram: false
     }
+  },
+  {
+    first_name: 'AJ',
+    last_name: 'Anderson',
+    position: 'Social Media Director',
+    picture_url: 'img/team/AJ.png',
+    social_links: {
+      twitter: false,
+      linkedin: false,
+      vimeo: false,
+      instagram: false
+    }
   }
-  // ,{
-  //   first_name: 'Keri-Lynn',
-  //   last_name: 'Mitoff',
-  //   position: 'Senior UI/UX Designer',
-  //   picture_url: 'img/team/Keri-Lynn.jpg',
-  //   social_links: {
-  //     twitter: false,
-  //     linkedin: false,
-  //     vimeo: false,
-  //     instagram: false
-  //   }
-  // }
 ];
 
 // HANDLERS ===================================================================
